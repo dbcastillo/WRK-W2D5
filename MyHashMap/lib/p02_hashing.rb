@@ -4,6 +4,15 @@ end
 
 class Array
   def hash
+    total = 0
+    each do |num|
+      if num % 2 == 0 
+       total += num.hash 
+     else
+       total -= num.hash
+     end
+    end
+    return total
   end
 end
 

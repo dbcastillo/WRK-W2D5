@@ -8,6 +8,7 @@ class MaxIntSet
   def insert(num)
     raise "Out of bounds" if num < 0 || num > @max 
     @store.push(num)
+
   end
 
   def remove(num)
