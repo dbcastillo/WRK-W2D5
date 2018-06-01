@@ -90,12 +90,15 @@ class ResizingIntSet
   end
 
   def include?(num)
-    @store.include?([num])
+    self[num]
+    
   end
 
   private
 
   def [](num)
+
+    @store[num % @store.length]
     # optional but useful; return the bucket corresponding to `num`
   end
 
